@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/pokedex.css" />
+
+    <!-- ICONS  -->
+    <head>
+      <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        rel="stylesheet"
+      />
+    </head>
+  </head>
+  <body>
+    <nav class="container">
+      <div class="d-flex nav-left">
+        <img src="../assets/AI_Better_Pokedex.png" width="70px" alt="Pokedex" />
+        <a href="../index.html"><button class="btn bg-primary">Home</button></a>
+        <a href="fight.html"><button class="btn bg-secondary">Fight</button></a>
+      </div>
+      <label for="search-pokemon" class="search-pokemon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          id="search_pokemon"
+          type="text"
+          placeholder="Cerca il tuo pokemon"
+        />
+      </label>
+      <button id="change_sprite_button" class="btn">
+        <i class="fa-solid fa-retweet"></i>Change sprite
+      </button>
+    </nav>
+    <main>
+      <div id="pokemon-list" class="pokemon-list"></div>
+    </main>
+    <script src="../script.js"></script>
+  </body>
+</html>

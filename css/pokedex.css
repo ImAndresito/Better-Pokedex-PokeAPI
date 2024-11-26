@@ -1,0 +1,154 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px 0;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.nav-left {
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.nav-left button {
+  gap: 20px;
+}
+
+nav button {
+  font-size: 16px;
+}
+
+#change_sprite_button {
+  background: #dddddd;
+}
+
+.search-pokemon {
+  border-radius: 15px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0px 0px 8px -2px #00000066;
+  cursor: pointer;
+}
+
+.search-pokemon i {
+  font-size: 20px;
+}
+
+.search-pokemon input {
+  font-size: 16px;
+  padding: 15px 20px 15px 5px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-items: center;
+  margin-top: 20px;
+  width: 95%;
+  padding-bottom: 35px;
+}
+
+.pokemon-card {
+  padding: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  align-items: center;
+  position: relative;
+}
+
+.pokemon-card1 {
+  box-shadow: 0px 0px 15px -3px #00000066;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 45%;
+  border-radius: 15px;
+}
+
+img {
+  z-index: 999;
+  max-width: 100%;
+}
+
+.view-details {
+  z-index: 998;
+}
+
+.pokemon-name {
+  text-transform: capitalize;
+}
+
+.type-container {
+  gap: 18px;
+  margin: 15px 0;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
+.type-container img {
+  width: 40%;
+}
+
+@media (width <=990px) {
+  .pokemon-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pokemon-card {
+    max-width: 230px;
+  }
+}
+
+@media (width <=870px) {
+  #change_sprite_button {
+    margin-left: auto;
+  }
+}
+
+@media (width <= 650px) {
+  .search-pokemon {
+    width: 200px;
+  }
+
+  .search-pokemon input {
+    font-size: 15px;
+  }
+  .nav-left {
+    margin-right: auto;
+  }
+}
+
+@media (width <= 520px) {
+  #change_sprite_button {
+    margin-left: 0;
+  }
+  nav {
+    flex-direction: row-reverse;
+  }
+}
+@media (width <= 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-pokemon {
+    width: 220px;
+  }
+  .pokemon-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

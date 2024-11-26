@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Details</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="nav-left">
+          <a href="./pokedex.html">Back to Pokedex</a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div id="pokemon-details" class="pokemon-details"></div>
+    </main>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const pokemonId = params.get('id');
+
+      const pokemonDetailsElement = document.getElementById('pokemon-details');
+
+      fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId.toLowerCase()}`)
+        .then((response) => response.json())
+        .then((pokemon) => {
+          const details = `
+                    <h1>${pokemon.name} (#${pokemon.id})</h1>
+                    <p><strong>Height:</strong> ${pokemon.height}</p>
+                    <p><strong>Weight:</strong> ${pokemon.weight}</p>
+                    <p><strong>Types:</strong> ${pokemon.types
+                      .map((t) => t.type.name)
+                      .join(', ')}</p>
+                    <p><strong>Abilities:</strong> ${pokemon.abilities
+                      .map((a) => a.ability.name)
+                      .join(', ')}</p>
+                    <h3>Base Stats:</h3>
+                    <ul>
+                        ${pokemon.stats
+                          .map(
+                            (stat) =>
+                              `<li>${stat.stat.name}: ${stat.base_stat}</li>`
+                          )
+                          .join('')}
+                    </ul>
+                `;
+          pokemonDetailsElement.innerHTML = details;
+        })
+        .catch((error) => {
+          pokemonDetailsElement.textContent = 'Error loading Pokémon details.';
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>

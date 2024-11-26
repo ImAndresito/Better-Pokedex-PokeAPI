@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Fight</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+    <main>
+      <h1>Pokémon Fight</h1>
+      <div class="d-flex j-around ai-center">
+        <!-- Left Pokémon Section -->
+        <section class="search-container">
+          <label for="search-left">Search Left Pokémon:</label><br />
+          <input type="text" id="search-left" placeholder="Search Pokémon" />
+          <div id="suggestions-left"></div>
+          <button id="select-left">Select Left Pokémon</button>
+          <button id="random-left" class="btn bg-secondary">
+            Random Left Pokémon
+          </button>
+        </section>
+
+        <!-- First Turn Selector -->
+        <div>
+          <label for="first-turn">Who goes first?</label> <br />
+          <select id="first-turn">
+            <option value="left">Left Pokémon</option>
+            <option value="right">Right Pokémon</option>
+          </select>
+        </div>
+
+        <!-- Right Pokémon Section -->
+        <section class="search-container">
+          <label for="search-right">Search Right Pokémon:</label><br />
+          <input type="text" id="search-right" placeholder="Search Pokémon" />
+          <div id="suggestions-right"></div>
+          <button id="select-right">Select Right Pokémon</button>
+          <button id="random-right" class="btn bg-primary">
+            Random Right Pokémon
+          </button>
+        </section>
+      </div>
+
+      <!-- Pokémon Cards and Fight Log -->
+      <div class="d-flex j-around">
+        <div id="pokemon-left-card">
+          <h2>Left Pokémon</h2>
+          <p id="left-hp">HP: --</p>
+          <p id="left-attack">Attack: --</p>
+        </div>
+        <div id="fight-log"></div>
+        <div id="pokemon-right-card">
+          <h2>Right Pokémon</h2>
+          <p id="right-hp">HP: --</p>
+          <p id="right-attack">Attack: --</p>
+        </div>
+      </div>
+
+      <button id="fight-button">Start Fight</button>
+    </main>
+    <script src="../fightScript.js"></script>
+  </body>
+</html>

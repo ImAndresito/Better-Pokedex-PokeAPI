@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #457b9d;
+  --secondary: #c83e4d;
+  --white: #fff;
+}
+
+html {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100dvh;
+  background: #f6f8fc;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.homepage-bg {
+  background-image: url(../assets/icons/pokeball.svg);
+  background-repeat: no-repeat;
+  background-color: #ffffffc4;
+  background-blend-mode: lighten;
+  background-position: right top;
+}
+
+.main-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 5%;
+}
+
+.title {
+  font-size: calc(3rem + 2vw);
+}
+
+.title span {
+  font-size: calc(1rem + 2vw);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.main-buttons-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.github {
+  background: #010409;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* ///////////// GLOBAL /////////////*/
+.btn {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 400;
+}
+
+.bg-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.bg-secondary {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.j-around {
+  justify-content: space-around;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
