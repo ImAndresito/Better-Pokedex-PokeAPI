@@ -75,6 +75,7 @@ nav button {
   bottom: 0;
   height: 45%;
   border-radius: 15px;
+  background: #fff;
 }
 
 img {
@@ -84,10 +85,24 @@ img {
 
 .view-details {
   z-index: 998;
+  color: #fff;
+  background: #000;
+  font-weight: 500;
+  font-size: 11px;
+  padding: 5px 9px;
+  border-radius: 5px;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 5px;
 }
 
 .pokemon-name {
   text-transform: capitalize;
+  z-index: 998;
+  font-weight: 400;
+  margin-top: 5px;
+  font-size: 20px;
 }
 
 .type-container {
