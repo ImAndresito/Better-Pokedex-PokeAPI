@@ -4,6 +4,9 @@ _Progetto scolastico realizzato presso l'ITIS Pininfarina_
 
 **Gruppo composto da:** **_Villa_** e **_Borreo_**
 
+## 🌐 **Progetto online**
+Il progetto è visibile al seguente link: [Better Pokedex](https://better-pokedex-poke-api.vercel.app/?vercelToolbarCode=C15saksKHASoK2P)
+
 ## :sparkles: Caratteristiche del progetto
 
 - Elenco completo di tutti i Pokémon.
@@ -29,3 +32,6 @@ _Progetto scolastico realizzato presso l'ITIS Pininfarina_
 - Fetch degli sprite dei Pokémon nella sezione Pokédex.
 - Implementazione della barra di ricerca con aggiornamento degli sprite in tempo reale.
 - Progettazione e realizzazione dell'interfaccia grafica del sito.
+
+### 📌 **Nota tecnica**
+La modalità _Fight_ non è completamente ottimizzata per i dispositivi mobili di piccole dimensioni, come gli iPhone 5/SE.  

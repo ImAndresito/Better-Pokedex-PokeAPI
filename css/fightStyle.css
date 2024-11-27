@@ -88,11 +88,6 @@ img {
   box-shadow: 0px 0px 6px -3px #00000066;
 }
 
-.fight-logs button {
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
 .fight-container {
   position: fixed;
   display: grid;
@@ -165,6 +160,7 @@ div#pokemon-right-card {
 
 .new-fight {
   background: #eab811;
+  margin: 15px auto 0;
 }
 
 @media (width <= 1050px) {
@@ -189,5 +185,52 @@ div#pokemon-right-card {
   .right-container,
   .left-container {
     width: 50%;
+  }
+
+  .fight-logs {
+    height: 100px;
+    overflow: auto;
+  }
+}
+
+@media (width <= 630px) {
+  .fight-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .right-container,
+  .left-container {
+    width: 50%;
+  }
+
+  .fight-logs {
+    height: 100px;
+    overflow: auto;
+  }
+}
+
+@media (width <= 460px) {
+  p {
+    font-size: 13px;
+  }
+  .stats-container {
+    font-size: 13px;
+  }
+  .search-container label {
+    font-size: 13px;
+  }
+
+  .search-container input {
+    font-size: 13px;
+  }
+
+  .search-container button {
+    font-size: 16px;
+  }
+
+  .fight-container button {
+    font-size: 13px;
   }
 }
