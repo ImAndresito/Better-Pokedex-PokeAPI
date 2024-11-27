@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon Details</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/pokemon.css" />
   </head>
   <body>
     <nav>
       <div class="navbar">
         <div class="nav-left">
-          <a href="./pokedex.html">Back to Pokedex</a>
+          <a href="./pokedex.html"
+            ><button class="btn bg-primary">Back to Pokedex</button></a
+          >
         </div>
       </div>
     </nav>
@@ -27,8 +30,21 @@
         .then((response) => response.json())
         .then((pokemon) => {
           const details = `
-                    <h1>${pokemon.name} (#${pokemon.id})</h1>
-                    <p><strong>Height:</strong> ${pokemon.height}</p>
+                    <div class="pokemon-stats-container"><div class=pokemon-name-img><h1>${
+                      pokemon.name
+                    } (#${pokemon.id})</h1>
+                    <img src="${
+                      pokemon.sprites.other.home.front_default
+                    }" alt="${pokemon.name}"/></div>
+                    <div class="pokemon-stats"><h3>Base Stats:</h3>
+                    <ul>
+                        ${pokemon.stats
+                          .map(
+                            (stat) =>
+                              `<li><b>${stat.stat.name}</b>: ${stat.base_stat}</li>`
+                          )
+                          .join('')}
+                    </ul><p><strong>Height:</strong> ${pokemon.height}</p>
                     <p><strong>Weight:</strong> ${pokemon.weight}</p>
                     <p><strong>Types:</strong> ${pokemon.types
                       .map((t) => t.type.name)
@@ -36,15 +52,7 @@
                     <p><strong>Abilities:</strong> ${pokemon.abilities
                       .map((a) => a.ability.name)
                       .join(', ')}</p>
-                    <h3>Base Stats:</h3>
-                    <ul>
-                        ${pokemon.stats
-                          .map(
-                            (stat) =>
-                              `<li>${stat.stat.name}: ${stat.base_stat}</li>`
-                          )
-                          .join('')}
-                    </ul>
+                    </div></div>
                 `;
           pokemonDetailsElement.innerHTML = details;
         })

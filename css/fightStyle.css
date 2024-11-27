@@ -1,18 +1,35 @@
 body {
-  /* background-image: url(/assets/img/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; */
+  height: 100dvb;
+  overflow: hidden;
+}
+
+nav button {
+  margin-top: 15px;
+  margin-left: 2.5%;
+}
+
+h1 {
+  margin: 15px 0 0 2.5%;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .left-container {
   display: flex;
-  gap: 30px;
-  position: absolute;
+  gap: 20px;
   bottom: 30px;
-  left: 5%;
-  min-width: 400px;
 }
 
+#pokemon-left-card {
+  margin-top: auto;
+}
 .left-container img {
   height: 220px;
   transform: scaleX(-1);
@@ -23,11 +40,8 @@ body {
 }
 
 .right-container {
-  position: absolute;
-  bottom: 30px;
-  right: 5%;
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .right-container img {
@@ -41,6 +55,7 @@ body {
 .stats {
   display: flex;
   justify-content: space-around;
+  margin: 5px;
 }
 
 .moves {
@@ -58,4 +73,121 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.left-container,
+.right-container {
+  justify-content: space-around;
+}
+
+.fight-logs {
+  width: fit-content;
+  margin: 20px auto 0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 6px -3px #00000066;
+}
+
+.fight-logs button {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.fight-container {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  bottom: 25px;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rightcard--container {
+  margin-top: auto;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  margin: 5px 0;
+}
+
+.to-bottom {
+  margin-top: auto;
+}
+
+div#pokemon-right-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.search-container label {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.search-container input {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.search-container button {
+  font-size: 16px;
+}
+
+#select-right,
+#select-left {
+  background: #453d54;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  padding-right: 0;
+}
+
+#select-right:hover,
+#select-left:hover {
+  background: #69676f;
+}
+
+.fight-container button {
+  font-size: 16px;
+  text-transform: capitalize;
+  box-shadow: 0px 0px 10px -3px #9e565666;
+}
+
+.new-fight {
+  background: #eab811;
+}
+
+@media (width <= 1050px) {
+  .left-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .right-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (width <= 630px) {
+  .fight-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .right-container,
+  .left-container {
+    width: 50%;
+  }
 }

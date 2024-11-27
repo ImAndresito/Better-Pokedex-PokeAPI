@@ -14,11 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchAndDisplayPokemons();
   });
 
-  const fetchAndDisplayPokemons = (
-    url = 'https://pokeapi.co/api/v2/pokemon'
-    // fetch(`https://pokeapi.co/api/v2/pokemon?limit=1085`)
-  ) => {
-    fetch(url)
+  const fetchAndDisplayPokemons = () => {
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=1302')
       .then((response) => response.json())
       .then((data) => {
         const pokemons = data.results;

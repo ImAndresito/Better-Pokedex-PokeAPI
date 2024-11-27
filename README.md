@@ -1,12 +1,31 @@
- # :collision: Better Pokedex 
+# :collision: Better Pokedex
 
-_Progetto scolastico presso ITIS Pinifarina_
+_Progetto scolastico realizzato presso l'ITIS Pininfarina_
 
-## Caratteristiche del progetto:
+**Gruppo composto da:** **_Villa_** e **_Borreo_**
 
-- Mostrare tutti pokemon
-- Caratterische del singolo pokemon cliccandoci sopra
-- Battaglia tra due pokmeon, assegnandone una ad ogni player(max 2)
+## :sparkles: Caratteristiche del progetto
 
-  - Caratteristiche **Battaglia**:
-    - work in progress...
+- Elenco completo di tutti i Pokémon.
+- Barra di ricerca per filtrare i Pokémon.
+- Visualizzazione dei dettagli di un singolo Pokémon tramite il pulsante _Info_.
+- Modalità di battaglia tra due Pokémon, selezionati manualmente o generati casualmente.
+
+## :hammer_and_wrench: Tecnologie utilizzate
+
+- **HTML**
+- **CSS**
+- **JavaScript**  
+  *(Senza l'utilizzo di framework o librerie esterne)*
+
+## :busts_in_silhouette: Funzionalità sviluppate dai membri del gruppo
+
+### Borreo:
+- Realizzazione della fetch per ottenere l'elenco completo dei Pokémon nel Pokédex.
+- Implementazione della fetch per visualizzare i dettagli di un Pokémon selezionato.
+- Sviluppo della fetch e delle funzionalità nella sezione _Fight_.
+
+### Villa:
+- Fetch degli sprite dei Pokémon nella sezione Pokédex.
+- Implementazione della barra di ricerca con aggiornamento degli sprite in tempo reale.
+- Progettazione e realizzazione dell'interfaccia grafica del sito.
